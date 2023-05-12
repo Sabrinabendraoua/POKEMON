@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "../assets/Home.css";
 
@@ -27,16 +27,18 @@ const Types = () => {
   ) : (
     <main classnamme="main-types">
       <h1>Types</h1>
-      <div className="types">
-        {data.map((type, index) => {
-          // console.log(type);
-          return (
-            <div key={index} className="type">
-              <p>{type.name}</p>
-            </div>
-          );
-        })}
-      </div>
+      <Link to="/Type">
+        <div className="types">
+          {data.map((type, index) => {
+            // console.log(type);
+            return (
+              <div key={index} className="type">
+                <p>{type.name}</p>
+              </div>
+            );
+          })}
+        </div>
+      </Link>
     </main>
   );
 };

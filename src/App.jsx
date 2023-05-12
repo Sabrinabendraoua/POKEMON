@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Pokemons from "./pages/Pokemons";
 import Pokemon from "./pages/Pokemon";
 import Types from "./pages/Types";
+import Type from "./pages/Type";
 
 //Components
 import Header from "./components/Header";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/pokemons" element={<Pokemons />} />
         <Route path="/pokemon" element={<Pokemon />} />
         <Route path="/types" element={<Types />} />
+        <Route path="/type" element={<Type />} />
       </Routes>
     </Router>
   );

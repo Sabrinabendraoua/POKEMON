@@ -1,5 +1,5 @@
 const Type = () => {
-  return <h1>types</h1>;
+  return <h1>type</h1>;
 };
 
 export default Type;
