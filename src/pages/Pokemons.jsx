@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Pokemons = () => {
@@ -32,12 +32,14 @@ const Pokemons = () => {
           const urlPokemon = pokemon.url.split("/")[6];
           console.log(urlPokemon);
           return (
-            <div className="pokemon" key={index}>
-              <p>{pokemon.name}</p>
-              <img
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${urlPokemon}.png `}
-              />
-            </div>
+            <Link to="/Pokemon">
+              <div className="pokemon" key={index}>
+                <p>{pokemon.name}</p>
+                <img
+                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${urlPokemon}.png `}
+                />
+              </div>
+            </Link>
           );
         })}
       </div>

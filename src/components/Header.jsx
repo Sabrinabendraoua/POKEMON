@@ -1,7 +1,6 @@
 import logo from "../images/logo-pokemon.png";
 import { Link } from "react-router-dom";
 import "../assets/Header.css";
-import Pokemons from "../pages/Pokemons";
 
 const Header = () => {
   return (
