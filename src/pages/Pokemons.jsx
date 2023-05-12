@@ -24,15 +24,15 @@ const Pokemons = () => {
   return isLoading ? (
     <p>Loading...</p>
   ) : (
-    <div>
+    <main className="main-pokemons">
       <h1>Pokemons</h1>
-      <div>
+      <div className="pokemons">
         {data.map((pokemon, index) => {
           // console.log(pokemon);
           const urlPokemon = pokemon.url.split("/")[6];
           console.log(urlPokemon);
           return (
-            <div key={index}>
+            <div className="pokemon" key={index}>
               <p>{pokemon.name}</p>
               <img
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${urlPokemon}.png `}
@@ -41,7 +41,7 @@ const Pokemons = () => {
           );
         })}
       </div>
-    </div>
+    </main>
   );
 };
 
