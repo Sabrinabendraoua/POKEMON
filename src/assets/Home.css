@@ -17,3 +17,18 @@ main {
   justify-content: center;
   align-items: center;
 }
+.type-div {
+  background-color: aqua;
+}
+.type-p {
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  padding: 1rem;
+  margin: 1rem;
+  border: solid black 2px;
+  width: 5rem;
+  border-radius: 0.8rem;
+}
