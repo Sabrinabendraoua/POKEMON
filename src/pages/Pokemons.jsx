@@ -30,7 +30,7 @@ const Pokemons = () => {
         {data.map((pokemon, index) => {
           // console.log(pokemon);
           const urlPokemon = pokemon.url.split("/")[6];
-          console.log(urlPokemon);
+          // console.log(urlPokemon);
           return (
             <Link to="/Pokemon">
               <div className="pokemon" key={index}>

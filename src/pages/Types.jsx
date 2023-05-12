@@ -25,19 +25,19 @@ const Types = () => {
   return isLoading ? (
     <p>Loading...</p>
   ) : (
-    <div>
+    <main classnamme="main-types">
       <h1>Types</h1>
-      <main classnamme="type-main">
+      <div className="types">
         {data.map((type, index) => {
           // console.log(type);
           return (
-            <div key={index} className="type-div">
-              <p className="type-p">{type.name}</p>
+            <div key={index} className="type">
+              <p>{type.name}</p>
             </div>
           );
         })}
-      </main>
-    </div>
+      </div>
+    </main>
   );
 };
 
