@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../assets/Home.css";
@@ -40,12 +40,14 @@ const Pokemon = () => {
           <img src={data.sprites.front_default} alt="image Pokemon" />
         </div>
         <div>
-          {data.types.map((allTypesPokemon, index) => {
-            console.log(allTypesPokemon);
+          {data.types.map((allTypesPokemon) => {
+            // console.log(allTypesPokemon);
             return (
-              <div key={index} className="allTypesPokemon">
-                <h3>{allTypesPokemon.type.name}</h3>
-              </div>
+              <Link to={`/type/${allTypesPokemon.type.name}`}>
+                <div className="allTypesPokemon">
+                  <h3>{allTypesPokemon.type.name}</h3>
+                </div>
+              </Link>
             );
           })}
         </div>
