@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../assets/Home.css";
@@ -32,7 +32,24 @@ const Type = () => {
     <p>Loading...</p>
   ) : (
     <main classnamme="main-types">
-      <h1>{data.name}</h1>
+      <h1>Type : {data.name}</h1>
+      <div className="pokemons">
+        {data.pokemon.map((pokemon, index) => {
+          console.log(pokemon.pokemon.url);
+          const urlPokemon = pokemon.pokemon.url.split("/")[6];
+          // console.log(urlPokemon);
+          return (
+            <Link to={`/pokemon/${pokemon.pokemon.name}`} key={index}>
+              <div className="pokemon">
+                <p>{pokemon.pokemon.name}</p>
+                <img
+                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${urlPokemon}.png `}
+                />
+              </div>
+            </Link>
+          );
+        })}
+      </div>
     </main>
   );
 };

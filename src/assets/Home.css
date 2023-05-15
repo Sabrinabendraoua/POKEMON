@@ -27,7 +27,6 @@ h1 {
   overflow: hidden;
 }
 .pokemons {
-  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -90,3 +89,5 @@ h1 {
   font-weight: 600;
   padding: 0.5rem;
 }
+
+/************************CSS TYPE***********************/

@@ -41,7 +41,7 @@ const Pokemon = () => {
         </div>
         <div>
           {data.types.map((allTypesPokemon) => {
-            // console.log(allTypesPokemon);
+            console.log(allTypesPokemon.type);
             return (
               <Link to={`/type/${allTypesPokemon.type.name}`}>
                 <div className="allTypesPokemon">
