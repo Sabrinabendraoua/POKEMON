@@ -17,7 +17,8 @@ const Pokemon = () => {
         const response = await axios.get(
           `https://pokeapi.co/api/v2/pokemon/${namePokemon}/`
         );
-        // console.log(response.data.name); // j'ai bien le nom du Type
+        // console.log(response.data.sprites.front_default); // j'ai bien le nom du Type
+        // console.log(response.data.types.name);
         setData(response.data);
         setIsLoading(false);
       };
@@ -31,8 +32,24 @@ const Pokemon = () => {
   return isLoading ? (
     <p>Loading...</p>
   ) : (
-    <main classnamme="main-types">
-      <h1>{data.name}</h1>
+    <main className="main-allTypesPokemon">
+      <h1>Pokemon</h1>
+      <div className="div-allTypesPokemon">
+        <div className="pokemon">
+          <p>{namePokemon}</p>
+          <img src={data.sprites.front_default} alt="image Pokemon" />
+        </div>
+        <div>
+          {data.types.map((allTypesPokemon, index) => {
+            console.log(allTypesPokemon);
+            return (
+              <div key={index} className="allTypesPokemon">
+                <h3>{allTypesPokemon.type.name}</h3>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </main>
   );
 };
