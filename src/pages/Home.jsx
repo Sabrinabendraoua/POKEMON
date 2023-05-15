@@ -1,5 +1,3 @@
-import "../assets/Home.css";
-
 const Home = () => {
   return (
     <main className="main-pokemons">

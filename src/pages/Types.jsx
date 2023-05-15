@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "../assets/Home.css";
 
 const Types = () => {
   const [data, setData] = useState("");
@@ -25,7 +24,7 @@ const Types = () => {
   return isLoading ? (
     <p>Loading...</p>
   ) : (
-    <main classnamme="main-types">
+    <main className="main-types">
       <div className="types">
         {data.map((type, index) => {
           // console.log(type);
