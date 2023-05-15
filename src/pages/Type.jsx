@@ -17,7 +17,7 @@ const Type = () => {
         const response = await axios.get(
           `https://pokeapi.co/api/v2/type/${nameType}/`
         );
-        console.log(response.data.name); // j'ai bien le nom du Type
+        // console.log(response.data.name); // j'ai bien le nom du Type
         setData(response.data);
         setIsLoading(false);
       };

@@ -26,18 +26,18 @@ const Types = () => {
     <p>Loading...</p>
   ) : (
     <main classnamme="main-types">
-      <Link to="/Type">
-        <div className="types">
-          {data.map((type, index) => {
-            // console.log(type);
-            return (
+      <div className="types">
+        {data.map((type, index) => {
+          // console.log(type);
+          return (
+            <Link to={`/Type/${type.name}`}>
               <div key={index} className="type">
                 <p>{type.name}</p>
               </div>
-            );
-          })}
-        </div>
-      </Link>
+            </Link>
+          );
+        })}
+      </div>
     </main>
   );
 };
