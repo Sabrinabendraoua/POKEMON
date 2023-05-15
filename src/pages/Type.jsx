@@ -15,9 +15,9 @@ const Type = () => {
     try {
       const fetchData = async () => {
         const response = await axios.get(
-          `https://pokeapi.co/api/v2/type/${nameType}`
+          `https://pokeapi.co/api/v2/type/${nameType}/`
         );
-        console.log(response.data);
+        console.log(response.data.name); // j'ai bien le nom du Type
         setData(response.data);
         setIsLoading(false);
       };
