@@ -26,7 +26,6 @@ const Types = () => {
     <p>Loading...</p>
   ) : (
     <main classnamme="main-types">
-      <h1>Types</h1>
       <Link to="/Type">
         <div className="types">
           {data.map((type, index) => {

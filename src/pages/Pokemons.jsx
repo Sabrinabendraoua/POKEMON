@@ -32,8 +32,8 @@ const Pokemons = () => {
           const urlPokemon = pokemon.url.split("/")[6];
           // console.log(urlPokemon);
           return (
-            <Link to="/Pokemon">
-              <div className="pokemon" key={index}>
+            <Link to="/Pokemon" key={index}>
+              <div className="pokemon">
                 <p>{pokemon.name}</p>
                 <img
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${urlPokemon}.png `}
